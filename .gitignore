@@ -5,3 +5,4 @@ coverage
 cypress/videos
 instrumented
 .vscode
+*.DS_Store

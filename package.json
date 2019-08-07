@@ -9,8 +9,8 @@
   },
   "scripts": {
     "test": "start-test 1234 cypress:run",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
+    "cypress:open": "PERCY_TOKEN=b735138c1119cb20011d78a84231f789900ff7a666d5c188842f92ad645b31d9 percy exec -- cypress open",
+    "cypress:run": "PERCY_TOKEN=b735138c1119cb20011d78a84231f789900ff7a666d5c188842f92ad645b31d9 percy exec -- cypress run",
     "start": "cross-env NODE_ENV=test parcel serve --no-cache public/index.html",
     "dev": "cross-env NODE_ENV=test start-test 1234 cypress:open",
     "report:coverage": "nyc report --reporter=html",
@@ -36,6 +36,7 @@
     "@babel/core": "7.5.5",
     "@babel/preset-react": "7.0.0",
     "@cypress/code-coverage": "1.8.0",
+    "@percy/cypress": "^2.0.0",
     "babel-plugin-istanbul": "5.2.0",
     "babel-plugin-transform-class-properties": "6.24.1",
     "coveralls": "3.0.5",

@@ -11,6 +11,9 @@
 // https://on.cypress.io/commands
 // ***********************************************
 
+// At the top of cypress/support/commands.js
+import '@percy/cypress';
+
 Cypress.Commands.add('createDefaultTodos', function () {
 
   let TODO_ITEM_ONE = 'buy some cheese'
